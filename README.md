@@ -5,7 +5,7 @@ Este repositorio contiene el material de clases (presentaciones, ejercicios y no
 ### Requerimientos
 * Lenguaje de Programación
     * Python 3.11
-    * Pip / Conda para instalar librerías
+    * [uv](https://docs.astral.sh/uv/) para gestionar el entorno y las dependencias
 * Librerías
     * Numpy
 	* Pandas
@@ -19,6 +19,24 @@ Este repositorio contiene el material de clases (presentaciones, ejercicios y no
     * GitHub para repositorios
 * IDE Recomendado 
     * PyCharm Community Edition    
+
+### Setup del entorno
+
+Con [uv](https://docs.astral.sh/uv/) instalado, desde la raíz del repositorio:
+
+```bash
+uv sync
+```
+
+Esto crea un `.venv` con Python 3.11 y todas las dependencias de `pyproject.toml` (incluyendo `ipykernel` y `jupyterlab` para correr los notebooks). Para registrar el kernel en Jupyter/VS Code:
+
+```bash
+uv run python -m ipykernel install --user --name=ceia-ap --display-name="Python (ceia-ap)"
+```
+
+Luego se pueden correr los notebooks con `uv run jupyter lab`, o seleccionando el kernel "Python (ceia-ap)" desde VS Code / otro editor.
+
+> Nota: `torch` y `torchvision` están fijados por debajo de las versiones que dejaron de publicar wheels para macOS Intel (x86_64); en otras plataformas se pueden destrabar esos topes en `pyproject.toml` si hace falta.
 
 ## Contenido
 

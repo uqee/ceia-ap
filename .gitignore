@@ -19,3 +19,4 @@ clase_8/jupyter_notebooks/transfer_learning_avanzado.ipynb
 __pycache__/
 *.py
 **/online/
+.DS_Store
