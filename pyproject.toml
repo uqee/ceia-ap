@@ -10,6 +10,7 @@ dependencies = [
     "matplotlib>=3.7.1",
     # torch 2.2.2's C extensions are built against the NumPy 1.x ABI
     "numpy>=1.24.3,<2",
+    "opencv-python-headless>=4.11.0.86",
     "pandas>=2.0.1",
     "pytorch-lightning>=2.0.0",
     "scikit-learn>=1.2.2",
